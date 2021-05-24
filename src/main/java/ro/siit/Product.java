@@ -7,13 +7,13 @@ public class Product {
 
     private String name;
     private BigDecimal price;
-    private double discount;
+    private BigDecimal discount;
 
     public Product(String name, BigDecimal price) {
-        this(name, price, 0.0D);
+        this(name, price, BigDecimal.ZERO);
     }
 
-    public Product(String name, BigDecimal price, double discount) {
+    public Product(String name, BigDecimal price, BigDecimal discount) {
         this.name = name;
         this.price = price;
         this.discount = discount;
@@ -35,11 +35,11 @@ public class Product {
         this.price = price;
     }
 
-    public double getDiscount() {
+    public BigDecimal getDiscount() {
         return discount;
     }
 
-    public void setDiscount(double discount) {
+    public void setDiscount(BigDecimal discount) {
         this.discount = discount;
     }
 
