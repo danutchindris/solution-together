@@ -7,10 +7,16 @@ public class Product {
 
     private String name;
     private BigDecimal price;
+    private BigDecimal discount;
 
     public Product(String name, BigDecimal price) {
+        this(name, price, BigDecimal.ZERO);
+    }
+
+    public Product(String name, BigDecimal price, BigDecimal discount) {
         this.name = name;
         this.price = price;
+        this.discount = discount;
     }
 
     public String getName() {
@@ -27,6 +33,14 @@ public class Product {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public BigDecimal getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(BigDecimal discount) {
+        this.discount = discount;
     }
 
     @Override
