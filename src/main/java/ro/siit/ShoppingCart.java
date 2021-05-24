@@ -60,4 +60,8 @@ public class ShoppingCart {
         }
         return sum;
     }
+
+    public int retrieveItemsNumber() {
+        return items.size();
+    }
 }
