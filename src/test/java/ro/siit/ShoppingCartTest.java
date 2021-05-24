@@ -36,4 +36,14 @@ public class ShoppingCartTest {
         sc.decreaseQuantity(new Item(product, 0), 20);
         Assertions.assertTrue(0 == sc.getItems().get(0).getQuantity());
     }
+
+    @Test
+    void removeItemTest() {
+        final ShoppingCart cart = new ShoppingCart();
+        final Item item = new Item(
+                new Product("masinuta", BigDecimal.valueOf(23.45)), 3);
+        cart.addItem(item);
+        cart.removeItem(item);
+        Assertions.assertTrue(cart.getItems().isEmpty());
+    }
 }
