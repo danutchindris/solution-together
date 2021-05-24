@@ -38,6 +38,13 @@ public class ShoppingCartTest {
     }
 
     @Test
+    void testAddItem() {
+        final ShoppingCart cart = new ShoppingCart();
+        cart.addItem(new Item(new Product("computer", BigDecimal.valueOf(2_000)), 1));
+        Assertions.assertEquals(1, cart.getItems().size());
+    }
+
+    @Test
     void removeItemTest() {
         final ShoppingCart cart = new ShoppingCart();
         final Item item = new Item(
